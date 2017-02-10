@@ -8,7 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import <ReactiveCocoa/ReactiveCocoa.h>
+#import "DataModel.h"
 
 @interface NetWork : NSObject
-+ (RACSignal *)loginWithUserName:(NSString *)name password:(NSString *)password;
++(void)loginWithUserName:(NSString *)userName password:(NSString *)password otherPara:(NSString *)otherPara success:(void(^)(id value))success failure:(void(^)(NSError *))failure;
 @end

@@ -9,6 +9,8 @@
 #import "LoginViewModel.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import "NetWork.h"
+#import "DataModel.h"
+#import "AccountModel.h"
 
 @implementation LoginViewModel
 
@@ -60,23 +62,39 @@
     // 不能动态改变button的enable 如：RAC(self.button, enable) = someSignal;
     
     _loginCommand = [[RACCommand alloc]initWithEnabled:_enableLoginSignal signalBlock:^RACSignal *(id input) {
-        NSLog(@"%@",input);
-        return [NetWork loginWithUserName:self.account.userName password:self.account.password];
+
+//        return [NetWork loginWithUserName:self.account.userName password:self.account.password];
+        return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+           // input:VC传递过来的参数
+            
+             // 网络层请求数据
+            [NetWork loginWithUserName:self.account.userName
+                              password:self.account.password
+                             otherPara:input
+                               success:^(id value) {
+                // 数据转模型
+                NSDictionary *dic = (NSDictionary *)value;
+                DataModel *model = [DataModel new];
+                model.name = [dic objectForKey:@"name"];
+                model.age = [dic objectForKey:@"age"];
+                
+                // 发送数据
+                [subscriber sendNext:model];
+                [subscriber sendCompleted];
+            } failure:^(NSError *error) {
+                [subscriber sendError:error];
+            }];
+            return nil;
+        }];
     }];
-    
-    // 错误信息
-    [_loginCommand.errors subscribeNext:^(id x) {
-        NSLog(@"error --> %@",x);
-    }];
-    
     
     // 监听登陆状态
     [[_loginCommand.executing skip:1]subscribeNext:^(id x) {
         if ([x isEqualToNumber:@(YES)]) {
             // 正在登陆
-            NSLog(@"正在登陆...:%@",x);
+            NSLog(@"正在登陆...");
         }else{
-            NSLog(@"登陆成功啦:%@",x);
+            NSLog(@"登陆成功啦!!!");
         }
     }];
 }

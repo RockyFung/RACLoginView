@@ -18,6 +18,8 @@
 		5C7CD42D1E4D6A0500AEF07A /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7CD42C1E4D6A0500AEF07A /* LoginViewModel.m */; };
 		5C7CD4301E4D6A4F00AEF07A /* AccountModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7CD42F1E4D6A4F00AEF07A /* AccountModel.m */; };
 		5C7CD4331E4D9EA800AEF07A /* NetWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7CD4321E4D9EA800AEF07A /* NetWork.m */; };
+		5C7CD43C1E4DB8B200AEF07A /* DataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7CD43B1E4DB8B200AEF07A /* DataModel.m */; };
+		5C7CD4431E4DBEDE00AEF07A /* LoginSuccessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7CD4411E4DBEDE00AEF07A /* LoginSuccessViewController.m */; };
 		A26FCD84F2D286072F2480BA /* Pods_RACLoginView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2EA178FF94EE6B95710CA1A /* Pods_RACLoginView.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +65,10 @@
 		5C7CD42F1E4D6A4F00AEF07A /* AccountModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountModel.m; sourceTree = "<group>"; };
 		5C7CD4311E4D9EA800AEF07A /* NetWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWork.h; sourceTree = "<group>"; };
 		5C7CD4321E4D9EA800AEF07A /* NetWork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWork.m; sourceTree = "<group>"; };
+		5C7CD43A1E4DB8B200AEF07A /* DataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataModel.h; sourceTree = "<group>"; };
+		5C7CD43B1E4DB8B200AEF07A /* DataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataModel.m; sourceTree = "<group>"; };
+		5C7CD4401E4DBEDE00AEF07A /* LoginSuccessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginSuccessViewController.h; sourceTree = "<group>"; };
+		5C7CD4411E4DBEDE00AEF07A /* LoginSuccessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginSuccessViewController.m; sourceTree = "<group>"; };
 		B2EA178FF94EE6B95710CA1A /* Pods_RACLoginView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RACLoginView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -136,6 +142,10 @@
 				5C7CD42C1E4D6A0500AEF07A /* LoginViewModel.m */,
 				5C7CD42E1E4D6A4F00AEF07A /* AccountModel.h */,
 				5C7CD42F1E4D6A4F00AEF07A /* AccountModel.m */,
+				5C7CD43A1E4DB8B200AEF07A /* DataModel.h */,
+				5C7CD43B1E4DB8B200AEF07A /* DataModel.m */,
+				5C7CD4401E4DBEDE00AEF07A /* LoginSuccessViewController.h */,
+				5C7CD4411E4DBEDE00AEF07A /* LoginSuccessViewController.m */,
 				5C7CD4011E4D63A800AEF07A /* Main.storyboard */,
 				5C7CD4041E4D63A800AEF07A /* Assets.xcassets */,
 				5C7CD4061E4D63A800AEF07A /* LaunchScreen.storyboard */,
@@ -366,10 +376,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C7CD4431E4DBEDE00AEF07A /* LoginSuccessViewController.m in Sources */,
 				5C7CD42D1E4D6A0500AEF07A /* LoginViewModel.m in Sources */,
 				5C7CD4001E4D63A800AEF07A /* ViewController.m in Sources */,
 				5C7CD4301E4D6A4F00AEF07A /* AccountModel.m in Sources */,
 				5C7CD3FD1E4D63A800AEF07A /* AppDelegate.m in Sources */,
+				5C7CD43C1E4DB8B200AEF07A /* DataModel.m in Sources */,
 				5C7CD4331E4D9EA800AEF07A /* NetWork.m in Sources */,
 				5C7CD3FA1E4D63A800AEF07A /* main.m in Sources */,
 			);

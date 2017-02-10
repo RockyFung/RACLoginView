@@ -9,6 +9,9 @@
 #import "ViewController.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import "LoginViewModel.h"
+#import "AccountModel.h"
+#import "DataModel.h"
+#import "LoginSuccessViewController.h"
 
 @interface ViewController ()
 @property (nonatomic, strong) LoginViewModel *loginViewModel;
@@ -94,22 +97,29 @@
     // 用上面方法绑定后就不需要加点击方法
     [[self.loginBtn rac_signalForControlEvents:UIControlEventTouchUpInside]subscribeNext:^(id x) {
        // 执行登陆事件,可传递参数
-        [self.loginViewModel.loginCommand execute:@"点击登陆"];
+        [[self.loginViewModel.loginCommand execute:@"其他参数"]subscribeNext:^(id x) {
+            DataModel *model = (DataModel *)x;
+            NSLog(@"获取到的数据: name=%@ age=%@",model.name, model.age);
+            LoginSuccessViewController *vc = [[LoginSuccessViewController alloc]init];
+            vc.model = model;
+            // 代理信号
+            vc.delegateSubject = [RACSubject subject];
+            [vc.delegateSubject subscribeNext:^(id x) {
+               // 方法实现
+                NSLog(@"接收到数据：%@",x);
+            }];
+            [self presentViewController:vc animated:YES completion:nil];
+        }error:^(NSError *error) {
+            
+        }];
     }];
 
     
-    // 获取网络请求的数据
+    // 获取最新网络请求的数据
 //    [self.loginViewModel.loginCommand.executionSignals.switchToLatest subscribeNext:^(id x) {
 //        NSLog(@"获取到的数据: %@",x);
 //    }];
-    
-    [[self.loginViewModel.loginCommand executionSignals]subscribeNext:^(id x) {
-        [self.indicator startAnimating];
-        [x subscribeNext:^(id x) {
-            [self.indicator stopAnimating];
-            NSLog(@"获取到的数据: %@",x);
-        }];
-    }];
+
 }
 
 - (void)didReceiveMemoryWarning {
