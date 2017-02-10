@@ -15,6 +15,10 @@
 		5C7CD4081E4D63A800AEF07A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C7CD4061E4D63A800AEF07A /* LaunchScreen.storyboard */; };
 		5C7CD4131E4D63A800AEF07A /* RACLoginViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7CD4121E4D63A800AEF07A /* RACLoginViewTests.m */; };
 		5C7CD41E1E4D63A800AEF07A /* RACLoginViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7CD41D1E4D63A800AEF07A /* RACLoginViewUITests.m */; };
+		5C7CD42D1E4D6A0500AEF07A /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7CD42C1E4D6A0500AEF07A /* LoginViewModel.m */; };
+		5C7CD4301E4D6A4F00AEF07A /* AccountModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7CD42F1E4D6A4F00AEF07A /* AccountModel.m */; };
+		5C7CD4331E4D9EA800AEF07A /* NetWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7CD4321E4D9EA800AEF07A /* NetWork.m */; };
+		A26FCD84F2D286072F2480BA /* Pods_RACLoginView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2EA178FF94EE6B95710CA1A /* Pods_RACLoginView.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3213B98C829076BD823D0CEA /* Pods-RACLoginView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACLoginView.release.xcconfig"; path = "Pods/Target Support Files/Pods-RACLoginView/Pods-RACLoginView.release.xcconfig"; sourceTree = "<group>"; };
+		5A193F498405EE965D3F80A5 /* Pods-RACLoginView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACLoginView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RACLoginView/Pods-RACLoginView.debug.xcconfig"; sourceTree = "<group>"; };
 		5C7CD3F51E4D63A800AEF07A /* RACLoginView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RACLoginView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C7CD3F91E4D63A800AEF07A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5C7CD3FB1E4D63A800AEF07A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,6 +57,13 @@
 		5C7CD4191E4D63A800AEF07A /* RACLoginViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RACLoginViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C7CD41D1E4D63A800AEF07A /* RACLoginViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACLoginViewUITests.m; sourceTree = "<group>"; };
 		5C7CD41F1E4D63A800AEF07A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C7CD42B1E4D6A0500AEF07A /* LoginViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewModel.h; sourceTree = "<group>"; };
+		5C7CD42C1E4D6A0500AEF07A /* LoginViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewModel.m; sourceTree = "<group>"; };
+		5C7CD42E1E4D6A4F00AEF07A /* AccountModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountModel.h; sourceTree = "<group>"; };
+		5C7CD42F1E4D6A4F00AEF07A /* AccountModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountModel.m; sourceTree = "<group>"; };
+		5C7CD4311E4D9EA800AEF07A /* NetWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWork.h; sourceTree = "<group>"; };
+		5C7CD4321E4D9EA800AEF07A /* NetWork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWork.m; sourceTree = "<group>"; };
+		B2EA178FF94EE6B95710CA1A /* Pods_RACLoginView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RACLoginView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A26FCD84F2D286072F2480BA /* Pods_RACLoginView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +92,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		17A1684A9F744DA725735254 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5A193F498405EE965D3F80A5 /* Pods-RACLoginView.debug.xcconfig */,
+				3213B98C829076BD823D0CEA /* Pods-RACLoginView.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		5C7CD3EC1E4D63A800AEF07A = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +108,8 @@
 				5C7CD4111E4D63A800AEF07A /* RACLoginViewTests */,
 				5C7CD41C1E4D63A800AEF07A /* RACLoginViewUITests */,
 				5C7CD3F61E4D63A800AEF07A /* Products */,
+				17A1684A9F744DA725735254 /* Pods */,
+				CEFCAD70E9AA54F985B21FFD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,8 +128,14 @@
 			children = (
 				5C7CD3FB1E4D63A800AEF07A /* AppDelegate.h */,
 				5C7CD3FC1E4D63A800AEF07A /* AppDelegate.m */,
+				5C7CD4311E4D9EA800AEF07A /* NetWork.h */,
+				5C7CD4321E4D9EA800AEF07A /* NetWork.m */,
 				5C7CD3FE1E4D63A800AEF07A /* ViewController.h */,
 				5C7CD3FF1E4D63A800AEF07A /* ViewController.m */,
+				5C7CD42B1E4D6A0500AEF07A /* LoginViewModel.h */,
+				5C7CD42C1E4D6A0500AEF07A /* LoginViewModel.m */,
+				5C7CD42E1E4D6A4F00AEF07A /* AccountModel.h */,
+				5C7CD42F1E4D6A4F00AEF07A /* AccountModel.m */,
 				5C7CD4011E4D63A800AEF07A /* Main.storyboard */,
 				5C7CD4041E4D63A800AEF07A /* Assets.xcassets */,
 				5C7CD4061E4D63A800AEF07A /* LaunchScreen.storyboard */,
@@ -140,6 +171,14 @@
 			path = RACLoginViewUITests;
 			sourceTree = "<group>";
 		};
+		CEFCAD70E9AA54F985B21FFD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B2EA178FF94EE6B95710CA1A /* Pods_RACLoginView.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +186,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5C7CD4221E4D63A800AEF07A /* Build configuration list for PBXNativeTarget "RACLoginView" */;
 			buildPhases = (
+				B0AAE7083656E5EF3E98136F /* [CP] Check Pods Manifest.lock */,
 				5C7CD3F11E4D63A800AEF07A /* Sources */,
 				5C7CD3F21E4D63A800AEF07A /* Frameworks */,
 				5C7CD3F31E4D63A800AEF07A /* Resources */,
+				05FDB2E654D7853CB5DB261C /* [CP] Embed Pods Frameworks */,
+				63CB12014B54F0D08A1B0FA2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -271,13 +313,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		05FDB2E654D7853CB5DB261C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RACLoginView/Pods-RACLoginView-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		63CB12014B54F0D08A1B0FA2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RACLoginView/Pods-RACLoginView-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B0AAE7083656E5EF3E98136F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5C7CD3F11E4D63A800AEF07A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C7CD42D1E4D6A0500AEF07A /* LoginViewModel.m in Sources */,
 				5C7CD4001E4D63A800AEF07A /* ViewController.m in Sources */,
+				5C7CD4301E4D6A4F00AEF07A /* AccountModel.m in Sources */,
 				5C7CD3FD1E4D63A800AEF07A /* AppDelegate.m in Sources */,
+				5C7CD4331E4D9EA800AEF07A /* NetWork.m in Sources */,
 				5C7CD3FA1E4D63A800AEF07A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -425,6 +518,7 @@
 		};
 		5C7CD4231E4D63A800AEF07A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A193F498405EE965D3F80A5 /* Pods-RACLoginView.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = EF3UZLJ4ZY;
@@ -437,6 +531,7 @@
 		};
 		5C7CD4241E4D63A800AEF07A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3213B98C829076BD823D0CEA /* Pods-RACLoginView.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = EF3UZLJ4ZY;
@@ -516,6 +611,7 @@
 				5C7CD4241E4D63A800AEF07A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5C7CD4251E4D63A800AEF07A /* Build configuration list for PBXNativeTarget "RACLoginViewTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +620,7 @@
 				5C7CD4271E4D63A800AEF07A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5C7CD4281E4D63A800AEF07A /* Build configuration list for PBXNativeTarget "RACLoginViewUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +629,7 @@
 				5C7CD42A1E4D63A800AEF07A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
